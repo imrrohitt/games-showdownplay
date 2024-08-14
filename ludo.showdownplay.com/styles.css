@@ -1,0 +1,207 @@
+body, h1, p, form, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://img.freepik.com/free-vector/ludo-board-game-different-perspective_23-2148698181.jpg?w=1380&t=st=1723300852~exp=1723301452~hmac=95015537a1871907a87befcce036cc68bfb5b04278c292f0b2f19acea835da9e') repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity level */
+    pointer-events: none; /* Ensure the overlay does not interfere with content interaction */
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.image-section {
+    flex: 1;
+    background-size: cover;
+    display: none;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.form-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #0047AB;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus {
+    border-color: #00A36C;
+    outline: none;
+}
+
+form button {
+    background: #FF0000;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background: #8B0000;
+}
+
+#message {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#message p {
+    margin: 0;
+}
+
+.error {
+    color: red;
+    font-weight: 600;
+}
+
+.success {
+    color: green;
+    font-weight: 600;
+}
+
+#username {
+    /*text-align: center;*/
+    margin-top: 20px;
+}
+
+#username p {
+        display: inline-block;
+    margin: 0;
+    color: #000000;
+    margin-block: 8%;
+    font-weight: 400;
+    font-size: 48px;
+}
+
+#username-text {
+    color: #000000;
+    font-weight: 800;
+}
+
+.copy-btn {
+    background: #FFA500;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+copy-btn:hover {
+    background: #FF4500;
+}
+
+
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        /*height: 65%;*/
+    }
+
+    .image-section {
+        display: none;
+    }
+    
+    .form-section {
+        padding: 40px;
+    }
+    form input, p {
+            font-size: 29px;
+    }
+    form {
+      font-size: 30px;
+    }
+    
+    form button{
+        font-size: 50px;
+    }
+    
+}
+
+@media (max-width: 767px) {
+    .form-section {
+        padding: 20px;
+    }
+
+    form input {
+        font-size: 14px;
+    }
+
+    form button {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,420 @@
+<?php include 'session_check.php'; ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recharge Wallet</title>
+    <link rel="stylesheet" href="r_styles.css">
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/66b90616146b7af4a439161a/1i51bvj1t';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</head>
+<body>
+    <!-- Wallet Section -->
+    <div id="walletSection">
+        <div id="walletBalance">Wallet Balance: Checking...</div>
+        <button id="rechargeButton">Recharge Your Wallet</button>
+    </div>
+
+  <button id="paymentHistoryButton">View Payment History</button>
+<!-- Button to Open the Password Change Modal -->
+<button id="changepassword" onclick="openPasswordModal()">Change Password</button>
+
+<!-- Password Change Modal -->
+<div id="passwordModal" class="modal">
+    <div class="modal-content" style = "    position: absolute;
+    top: 25%;
+    justify-content: start;
+    left: 6%;">
+        <span onclick="closePasswordModal()" class="close">&times;</span>
+        <form id="changePasswordForm" method="post" action="change_password.php">
+            <label for="current_password">Current Password:</label>
+            <input type="password" id="current_password" name="current_password" required>
+
+            <label for="new_password">New Password:</label>
+            <input type="password" id="new_password" name="new_password" required>
+
+            <label for="confirm_password">Confirm New Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+
+            <button type="submit">Update Password</button>
+            <p id="changePasswordMessage"></p>
+        </form>
+    </div>
+</div>
+
+  <button id="logoutButton"><a href ="logout.php"> logout</a></button>
+    <!-- Game Tables -->
+    <div class="table-container">
+                <div class="card">
+            <img src="https://img.freepik.com/free-vector/people-winning-losing-while-playing-ludo-game_23-2148681104.jpg?t=st=1723139939~exp=1723143539~hmac=1af86ea057424f4f2d56a9fe6c66d87a541a59d51ecee14772a723949f4a5d36&w=826" alt="Game Image" class="card-image">
+            <div class="card-content">
+                    <h3>500 INR Table</h3>
+                    <button onclick="joinTable(500)">Join</button>
+                </div>
+            </div>
+
+                <!--<div class="table">-->
+             <div class="card">
+            <img src="https://static.gameloop.com/img/31135d8469a27094dde85b60dbd92ce1.jpg?imageMogr2/thumbnail/undefinedx266.0/format/webp" alt="Game Image" class="card-image">
+            <div class="card-content">
+                <h3>1000 INR Table</h3>
+                <button onclick="joinTable(1000)">Join</button>
+            </div>
+        </div>
+        
+          <div class="card">
+            <img src="https://img.freepik.com/free-vector/people-playing-ludo-game_23-2148687823.jpg?t=st=1723141022~exp=1723144622~hmac=50ce3a74d9fffddda99aa948caec6e5f3d4c9dca786db59df11f39974ed9f4ab&w=826" alt="Game Image" class="card-image">
+            <div class="card-content">
+                <h3>Custom Table</h3>
+                <button onclick="joinCustomTable()">Join</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal for Recharge Request -->
+    <div id="rechargeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 style="color:white; font-weight : 500">Recharge Your Wallet</h2>
+            <img src="./assets/img/photo_6181352100051663896_x.jpg" alt="QR Code" class="qr-code">
+            <p style="color:white; font-weight : 500">Please scan the QR code above to make a payment. After payment, upload the screenshot below.</p>
+            <form id="rechargeForm" enctype="multipart/form-data">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" required>
+                <br>
+                <label for="screenshot">Upload Payment Screenshot:</label>
+                <input type="file" id="screenshot" name="screenshot" accept="image/*" required>
+                <br>
+                <button type="submit">Submit Request</button>
+            </form>
+            <div class="loader"></div>
+            <p id="message"></p>
+        </div>
+    </div>
+
+   
+    
+    <!-- Payment History Modal (HTML content remains the same) -->
+    <div id="paymentHistoryModal" class="modal payment-history-modal">
+        <div class="modal-content payment-history-content">
+            <span class="close-history payment-history-close">&times;</span>
+            <h2 class="payment-history-title">Payment History</h2>
+            <div id="transactionHistory" class="transaction-history">
+                <!-- Transaction history will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Messages -->
+    <div id="toastContainer"></div>
+
+    <script>
+    
+               document.addEventListener('DOMContentLoaded', function() {
+                    const historyButton = document.getElementById('paymentHistoryButton');
+                    const historyModal = document.getElementById('paymentHistoryModal');
+                    const closeHistoryBtn = document.querySelector('.close-history');
+                    const transactionHistoryElement = document.getElementById('transactionHistory');
+            
+                    historyButton.addEventListener('click', function() {
+                        historyModal.style.display = 'flex';
+            
+                        // Fetch the payment history
+                        fetch('get_payment_history.php')
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.status === 'success') {
+                                    transactionHistoryElement.innerHTML = data.history;
+                                } else {
+                                    showToast('Failed to load history.', 'error');
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                                showToast('An error occurred. Please try again.', 'error');
+                            });
+                    });
+            
+                    closeHistoryBtn.addEventListener('click', function() {
+                        historyModal.style.display = 'none';
+                    });
+            
+                    window.addEventListener('click', function(event) {
+                        if (event.target === historyModal) {
+                            historyModal.style.display = 'none';
+                        }
+                    });
+                });
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const rechargeButton = document.getElementById('rechargeButton');
+            const modal = document.getElementById('rechargeModal');
+            const closeBtn = document.querySelector('.close');
+            const form = document.getElementById('rechargeForm');
+            const messageElement = document.getElementById('message');
+            const loader = document.querySelector('.loader');
+            const walletBalanceElement = document.getElementById('walletBalance');
+            let isSubmitting = false;
+
+            // Show the modal when the recharge button is clicked
+            rechargeButton.addEventListener('click', function() {
+                modal.style.display = 'flex';
+            });
+
+            // Hide the modal when the close button is clicked
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+
+            // Hide the modal when clicked outside of the modal content
+            window.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+            // Form submission handling
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                if (isSubmitting) return; // Prevent multiple submissions
+                isSubmitting = true;
+                loader.style.display = 'block'; // Show loader
+                messageElement.textContent = ''; // Clear previous messages
+
+                const formData = new FormData(form);
+
+                fetch('recharge.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    loader.style.display = 'none'; // Hide loader
+                    isSubmitting = false;
+
+                    if (data.status === 'success') {
+                        showToast(data.message, 'success');
+                    } else {
+                        showToast(data.message, 'error');
+                    }
+
+                    // Hide the modal
+                    modal.style.display = 'none';
+
+                    // Update wallet balance
+                    updateWalletBalance();
+                })
+                .catch(error => {
+                    loader.style.display = 'none'; // Hide loader
+                    isSubmitting = false;
+                    console.error('Error:', error);
+                    showToast('An error occurred. Please try again.', 'error');
+
+                    // Hide the modal
+                    modal.style.display = 'none';
+
+                    // Update wallet balance
+                    updateWalletBalance();
+                });
+            });
+
+            // Function to update wallet balance
+            function updateWalletBalance() {
+                fetch('balance_checker.php', {
+                    cache: 'no-store' // Ensure fresh data from server
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        walletBalanceElement.textContent = 'Wallet Balance: ₹ ' + data.balance + '.00';
+                    } else {
+                        console.error('Error:', data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            }
+
+            // Function to poll for wallet balance updates
+            function startPolling() {
+                setInterval(updateWalletBalance, 3000); // Poll every 3 seconds
+            }
+
+            // Initial balance check and start polling
+            updateWalletBalance();
+            startPolling();
+
+            // Function to handle table joins
+            window.joinTable = function(amount) {
+                fetch('join_table.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ amount: amount })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        logTransaction('game_join', amount, 'Joined a game table with amount ₹' + amount + '.00');
+                        window.location.href = 'index.php'; // Redirect to game index page
+                    } else {
+                        showToast(data.message, 'error');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showToast('An error occurred. Please try again.', 'error');
+                });
+            };
+            
+            // Function to log transaction to the database
+                function logTransaction(type, amount, details) {
+                    fetch('get_wallet_balance.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            type: type,
+                            amount: amount,
+                            details: details
+                        })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.status !== 'success') {
+                            console.error('Failed to log transaction:', data.message);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error logging transaction:', error);
+                    });
+                }
+
+            window.joinCustomTable = function() {
+                const amount = prompt('Enter the amount for the custom table:');
+                if (amount) {
+                    joinTable(parseInt(amount));
+                }
+            };
+
+            // Function to show toast messages
+            function showToast(message, type) {
+                const toast = document.createElement('div');
+                toast.className = 'toast show';
+                toast.textContent = message;
+
+                if (type === 'success') {
+                    toast.style.backgroundColor = '#4caf50'; // Success color
+                } else if (type === 'error') {
+                    toast.style.backgroundColor = '#f44336'; // Error color
+                }
+
+                document.getElementById('toastContainer').appendChild(toast);
+
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                    toast.classList.add('hide');
+                    setTimeout(() => {
+                        document.getElementById('toastContainer').removeChild(toast);
+                    }, 500);
+                }, 3000);
+            }
+        });
+        
+        // Function to log win game transaction to the database
+        function logWinGameTransaction(details) {
+            fetch('handle_win_game.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    details: details
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status !== 'success') {
+                    console.error('Failed to log transaction:', data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error logging transaction:', error);
+            });
+        }
+                
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check for the 'win' query parameter in the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const winStatus = urlParams.get('win');
+        
+            if (winStatus === 'success') {
+                // Log the win transaction
+               logWinGameTransaction('User won the game.  amount credited successfull.');
+            }
+        
+        });
+        
+    
+  // JavaScript for Modal Handling
+    function openPasswordModal() {
+        document.getElementById("passwordModal").style.display = "block";
+    }
+
+    function closePasswordModal() {
+        document.getElementById("passwordModal").style.display = "none";
+    }
+
+    // Optional: Close the modal if the user clicks outside of it
+    window.onclick = function(event) {
+        var modal = document.getElementById("passwordModal");
+        if (event.target === modal) {
+            closePasswordModal();
+        }
+    }
+
+    // Form Submission for Change Password with AJAX (optional)
+    document.getElementById('changePasswordForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        var formData = new FormData(this);
+
+        fetch('change_password.php', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                document.getElementById('changePasswordMessage').style.color = 'green';
+                document.getElementById('changePasswordMessage').textContent = data.message;
+            } else {
+                document.getElementById('changePasswordMessage').textContent = data.message;
+            }
+        })
+        .catch(error => {
+            document.getElementById('changePasswordMessage').textContent = 'An error occurred. Please try again.';
+        });
+    });
+    </script>
+</body>
+</html>

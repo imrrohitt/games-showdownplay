@@ -1,0 +1,111 @@
+[03-Aug-2024 13:23:11 UTC] PHP Warning:  Undefined variable $db_username in /home3/showdt4k/public_html/register.php on line 19
+[03-Aug-2024 13:23:11 UTC] PHP Warning:  Undefined variable $db_password in /home3/showdt4k/public_html/register.php on line 19
+[03-Aug-2024 13:28:15 UTC] PHP Warning:  Undefined variable $db_username in /home3/showdt4k/public_html/register.php on line 19
+[03-Aug-2024 13:28:15 UTC] PHP Warning:  Undefined variable $db_password in /home3/showdt4k/public_html/register.php on line 19
+[03-Aug-2024 13:28:41 UTC] PHP Warning:  Undefined variable $db_username in /home3/showdt4k/public_html/register.php on line 19
+[03-Aug-2024 13:28:41 UTC] PHP Warning:  Undefined variable $db_password in /home3/showdt4k/public_html/register.php on line 19
+[03-Aug-2024 13:32:12 UTC] PHP Warning:  Undefined variable $db_username in /home3/showdt4k/public_html/register.php on line 19
+[03-Aug-2024 13:32:12 UTC] PHP Warning:  Undefined variable $db_password in /home3/showdt4k/public_html/register.php on line 19
+[03-Aug-2024 13:34:57 UTC] PHP Warning:  Undefined variable $db_username in /home3/showdt4k/public_html/register.php on line 19
+[03-Aug-2024 13:34:57 UTC] PHP Warning:  Undefined variable $db_password in /home3/showdt4k/public_html/register.php on line 19
+[03-Aug-2024 14:01:51 UTC] PHP Warning:  include(session_check.php): Failed to open stream: No such file or directory in /home3/showdt4k/public_html/index.php on line 1
+[03-Aug-2024 14:01:51 UTC] PHP Warning:  include(): Failed opening 'session_check.php' for inclusion (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/showdt4k/public_html/index.php on line 1
+[03-Aug-2024 14:02:32 UTC] PHP Warning:  include(session_check.php): Failed to open stream: No such file or directory in /home3/showdt4k/public_html/index.php on line 1
+[03-Aug-2024 14:02:32 UTC] PHP Warning:  include(): Failed opening 'session_check.php' for inclusion (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/showdt4k/public_html/index.php on line 1
+[03-Aug-2024 14:02:45 UTC] PHP Warning:  include(session_check.php): Failed to open stream: No such file or directory in /home3/showdt4k/public_html/index.php on line 1
+[03-Aug-2024 14:02:45 UTC] PHP Warning:  include(): Failed opening 'session_check.php' for inclusion (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/showdt4k/public_html/index.php on line 1
+[03-Aug-2024 16:08:07 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 16:08:44 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 16:09:24 UTC] PHP Warning:  Undefined array key "full_name" in /home3/showdt4k/public_html/register.php on line 10
+[03-Aug-2024 16:09:24 UTC] PHP Warning:  Undefined array key "mobile" in /home3/showdt4k/public_html/register.php on line 11
+[03-Aug-2024 16:09:24 UTC] PHP Warning:  Undefined array key "email" in /home3/showdt4k/public_html/register.php on line 12
+[03-Aug-2024 16:09:25 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 16:09:39 UTC] PHP Warning:  Undefined array key "full_name" in /home3/showdt4k/public_html/register.php on line 10
+[03-Aug-2024 16:09:39 UTC] PHP Warning:  Undefined array key "mobile" in /home3/showdt4k/public_html/register.php on line 11
+[03-Aug-2024 16:09:39 UTC] PHP Warning:  Undefined array key "email" in /home3/showdt4k/public_html/register.php on line 12
+[03-Aug-2024 16:09:39 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 16:09:57 UTC] PHP Warning:  Undefined array key "full_name" in /home3/showdt4k/public_html/register.php on line 10
+[03-Aug-2024 16:09:57 UTC] PHP Warning:  Undefined array key "mobile" in /home3/showdt4k/public_html/register.php on line 11
+[03-Aug-2024 16:09:57 UTC] PHP Warning:  Undefined array key "email" in /home3/showdt4k/public_html/register.php on line 12
+[03-Aug-2024 16:09:57 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 16:12:46 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 16:12:50 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[03-Aug-2024 16:13:10 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[03-Aug-2024 16:13:13 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 16:13:36 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 16:15:14 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 16:15:35 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 16:17:31 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 16:18:04 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 16:18:17 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 16:18:56 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[03-Aug-2024 16:19:55 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 16:20:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/showdt4k/public_html/register.php:47) in /home3/showdt4k/public_html/register.php on line 106
+[03-Aug-2024 16:21:26 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 16:22:15 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 16:22:17 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 16:23:19 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 16:40:21 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 16:44:23 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 16:44:34 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/showdt4k/public_html/register.php:80) in /home3/showdt4k/public_html/register.php on line 94
+[03-Aug-2024 16:45:40 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 16:45:49 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 16:48:48 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 16:49:03 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[03-Aug-2024 16:50:12 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 16:50:34 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[03-Aug-2024 17:35:07 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[03-Aug-2024 17:35:16 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[03-Aug-2024 17:35:24 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 17:36:39 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[03-Aug-2024 17:37:37 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[03-Aug-2024 17:55:23 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[03-Aug-2024 18:15:41 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[03-Aug-2024 19:46:47 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[03-Aug-2024 20:15:51 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[03-Aug-2024 20:15:51 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[03-Aug-2024 20:16:17 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 46
+[03-Aug-2024 22:10:03 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[03-Aug-2024 23:19:40 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[04-Aug-2024 00:13:40 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[04-Aug-2024 02:19:12 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[04-Aug-2024 03:39:12 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[04-Aug-2024 04:30:10 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[04-Aug-2024 04:32:10 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[04-Aug-2024 04:33:58 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[04-Aug-2024 04:34:01 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[04-Aug-2024 04:40:58 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[04-Aug-2024 04:41:07 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[04-Aug-2024 04:42:59 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[04-Aug-2024 04:43:47 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[04-Aug-2024 05:00:12 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[04-Aug-2024 05:00:20 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 21
+[04-Aug-2024 05:27:39 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 25
+[04-Aug-2024 05:32:33 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 25
+[04-Aug-2024 05:33:43 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 25
+[04-Aug-2024 05:33:48 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 50
+[04-Aug-2024 05:33:56 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 25
+[04-Aug-2024 05:35:33 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 50
+[04-Aug-2024 05:35:37 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 25
+[04-Aug-2024 06:05:24 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 25
+[04-Aug-2024 06:05:38 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 50
+[04-Aug-2024 06:06:38 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 25
+[04-Aug-2024 06:08:00 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 25
+[04-Aug-2024 06:15:00 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 52
+[04-Aug-2024 06:15:27 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 52
+[04-Aug-2024 06:15:35 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 52
+[04-Aug-2024 06:15:38 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 57
+[04-Aug-2024 06:16:02 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 52
+[04-Aug-2024 06:16:07 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 57
+[04-Aug-2024 06:16:12 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 52
+[04-Aug-2024 06:16:57 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 52
+[04-Aug-2024 06:17:05 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 52
+[04-Aug-2024 06:17:31 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 52
+[04-Aug-2024 06:17:48 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 57
+[04-Aug-2024 06:20:41 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 88
+[04-Aug-2024 06:20:55 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/register_html.php on line 88
+[04-Aug-2024 06:28:06 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 52
+[04-Aug-2024 06:28:29 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 52
+[04-Aug-2024 06:29:03 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 52
+[04-Aug-2024 06:29:08 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 52
+[04-Aug-2024 06:33:06 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home3/showdt4k/public_html/login_html.php on line 52

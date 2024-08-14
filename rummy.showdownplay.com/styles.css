@@ -1,0 +1,194 @@
+/* Basic Reset */
+body, h1, p, form, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('./sprites/cards/card_4.png') repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity level */
+    pointer-events: none; /* Ensure the overlay does not interfere with content interaction */
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    background: #383737;
+    box-shadow: 0 4px 8px rgba(245, 243, 243, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.image-section {
+    flex: 1;
+    background-size: cover;
+    display: none;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.form-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    color: #f6f3f3;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    color: rgb(212, 158, 22);
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus {
+    border-color: #ff7e5f;
+    outline: none;
+}
+
+form button {
+    background: rgb(212, 158, 22);
+    color: #fff;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background: rgb(80, 58, 5);
+}
+
+#message {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#message p {
+    margin: 0;
+}
+
+.error {
+    color: red;
+    font-weight: 600;
+}
+
+.success {
+    color: green;
+    font-weight: 600;
+}
+
+#username {
+    text-align: center;
+    margin-top: 20px;
+    
+}
+
+#username p {
+    display: inline-block;
+    margin: 0;
+    color: white;
+    font-weight: 400;
+}
+
+#username-text{
+    color: white;
+    font-weight: 800;
+}
+
+.copy-btn {
+    background: rgb(212, 158, 22);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.copy-btn:hover {
+    background: rgb(80, 58, 5);
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .image-section {
+        display: block;
+    }
+
+    .form-section {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .form-section {
+        padding: 20px;
+    }
+
+    form input {
+        font-size: 14px;
+    }
+
+    form button {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
